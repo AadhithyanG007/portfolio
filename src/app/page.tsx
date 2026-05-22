@@ -7,6 +7,8 @@ import { AtroposProjects } from "@/components/ui/atropos-projects";
 import { AnimatedContact } from "@/components/ui/animated-contact";
 import { Instagram, Linkedin, Github } from "lucide-react";
 
+import { projects } from "@/data/projects";
+
 export default function Home() {
   const navLinks = [
     { label: "HOME", href: "#" },
@@ -24,50 +26,14 @@ export default function Home() {
     },
   ];
 
-  // Projects data
-  const projects = [
-    {
-      id: 1,
-      title: "MediNexus",
-      description:
-        "Secure Enterprise Telemedicine Platform with Zero-Trust Authentication, Role-Based Access Control, and Split-Screen Video Consultation for seamless healthcare delivery.",
-      image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
-      tags: ["MERN", "PostgreSQL", "JWT", "REST APIs", "Tailwind"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/AadhithyanG007",
-      featured: true,
-    },
-    {
-      id: 2,
-      title: "SOON",
-      description:
-        "Something Out Of Nothing – A hybrid Android team showcase app with digital roster, task logging, gamified points system, and team gallery built with modern web technologies.",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop",
-      tags: ["React", "Vite", "Capacitor", "Cloudflare Pages"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/AadhithyanG007",
-      featured: true,
-    },
-    {
-      id: 3,
-      title: "Portfolio Website",
-      description:
-        "This very website! Built with Next.js, Framer Motion, and Tailwind CSS with stunning 3D animations, particle effects, and WebGL light rays.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      tags: ["Next.js", "Framer Motion", "Three.js", "TypeScript"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/AadhithyanG007",
-    },
-  ];
+  // Filter only featured projects
+  const featuredProjects = projects.filter((p) => p.featured);
 
   return (
     <main className="relative z-10">
       {/* Section 1: Landing - MinimalistHero */}
       <MinimalistHero
-        logoText="portfolio."
+        logoText="Aadhithyan G."
         navLinks={navLinks}
         mainText="B.Tech student passionate about building full-stack systems that solve real-world problems."
         readMoreLink="#about"
@@ -96,7 +62,7 @@ export default function Home() {
         <AtroposProjects
           title="Featured Projects"
           subtitle="A showcase of my recent work and passion projects"
-          projects={projects}
+          projects={featuredProjects}
         />
       </section>
 

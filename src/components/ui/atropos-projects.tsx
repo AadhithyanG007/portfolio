@@ -4,21 +4,10 @@ import React, { useRef, useEffect } from "react";
 import Atropos from "atropos/react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
-import "atropos/css";
-
-export interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  liveUrl?: string;
-  githubUrl?: string;
-  featured?: boolean;
-  category?: string;
-}
+import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
+import { Project } from "@/data/projects";
 
 interface AtroposProjectsProps {
   title?: string;
@@ -74,24 +63,30 @@ export const ProjectCard = ({
   project: Project;
   index: number;
 }) => {
+  const router = useRouter();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "-50px" }}
+      className="h-full"
       transition={{ duration: 0.6, delay: index * 0.1 }}
     >
       <Atropos
-        className="w-full"
+        className="w-full h-full"
         shadow={false}
         highlight={false}
         rotateXMax={10}
         rotateYMax={10}
       >
         <SpotlightCard className="group h-full animate-fade-in">
-          <div className="relative h-full rounded-2xl glass-dark overflow-hidden flex flex-col justify-between">
-            {/* Core clickable card content linking to dedicated projects page */}
-            <Link href="/projects" className="block cursor-pointer flex-1">
+          <div 
+            onClick={() => router.push(`/projects/${project.id}`)}
+            className="relative h-full rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md overflow-hidden flex flex-col justify-between cursor-pointer group/card"
+          >
+            {/* Core clickable card content */}
+            <div className="block flex-1">
               {/* Image section */}
               <div
                 className="relative h-48 overflow-hidden"
@@ -146,32 +141,22 @@ export const ProjectCard = ({
                   {project.description}
                 </p>
               </div>
-            </Link>
+            </div>
 
-            {/* Links footer (not nested inside the main Link block to keep buttons separately active) */}
+            {/* Links footer */}
             <div className="p-6 pt-0" data-atropos-offset="10">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 relative z-20">
                 {project.liveUrl && (
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm font-medium text-white/80 hover:text-[#FBBF24] transition-colors group/link"
+                    onClick={(e) => e.stopPropagation()}
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#FBBF24]/10 border border-[#FBBF24]/20 text-sm font-medium text-white/80 hover:text-[#FBBF24] hover:bg-[#FBBF24]/20 transition-all group/link"
                   >
                     <ExternalLink className="w-4 h-4" />
                     <span>Live Demo</span>
                     <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
-                  </a>
-                )}
-                {project.githubUrl && (
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm font-medium text-white/80 hover:text-[#FBBF24] transition-colors"
-                  >
-                    <Github className="w-4 h-4" />
-                    <span>Code</span>
                   </a>
                 )}
               </div>
@@ -254,7 +239,7 @@ export const AtroposProjects = ({
           >
             <Link
               href="/projects"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-[#E2B65C] text-black font-bold rounded-full hover:bg-[#d8a648] transition-colors group"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white/5 border border-white/10 rounded-full text-white font-medium hover:bg-white/10 hover:border-[#FBBF24]/50 hover:text-[#FBBF24] transition-all group backdrop-blur-md"
             >
               <span>View All Projects</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

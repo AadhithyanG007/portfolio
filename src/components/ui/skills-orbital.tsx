@@ -294,7 +294,7 @@ export default function SkillsOrbital() {
         Click on any skill to explore related technologies
       </p>
 
-      <div className="relative w-full max-w-6xl h-[50rem] flex items-center justify-center">
+      <div className="relative w-full max-w-6xl h-[60rem] flex items-center justify-center">
         {/* Center Circle - Gold React Icon */}
         <div className="absolute w-24 h-24 rounded-full bg-gradient-to-br from-gray-900 to-black border-2 border-white/20 shadow-2xl flex items-center justify-center z-20">
           <div className="absolute w-28 h-28 rounded-full border border-[#E2B65C]/30 animate-ping opacity-30" />

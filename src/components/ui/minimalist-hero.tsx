@@ -182,7 +182,7 @@ export const MinimalistHero = ({
       )}
     >
       {/* Fixed Glass Navbar */}
-      <header className="fixed top-0 left-0 right-0 z-[100] glass border-b border-white/5 py-4 px-6 md:px-12 flex items-center justify-between transition-all duration-300">
+      <header className="fixed top-0 left-0 right-0 z-[100] bg-black/10 backdrop-blur-md border-b border-white/5 py-4 px-6 md:px-12 flex items-center justify-between transition-all duration-300">
         <div className="w-full max-w-7xl mx-auto flex items-center justify-between">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -355,21 +355,7 @@ export const MinimalistHero = ({
           ))}
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        >
-          <span className="text-xs text-white/40 tracking-widest">SCROLL</span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          >
-            <ChevronDown className="w-5 h-5 text-[#FBBF24]" />
-          </motion.div>
-        </motion.div>
+
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

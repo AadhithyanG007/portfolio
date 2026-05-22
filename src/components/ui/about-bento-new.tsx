@@ -70,7 +70,7 @@ function GlassCard({
         inactiveZone={0.01}
         borderWidth={2}
       />
-      <div className="relative h-full rounded-2xl glass-dark p-6 overflow-hidden">
+      <div className="relative h-full rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md p-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent rounded-2xl pointer-events-none" />
         <div className="relative z-10 h-full">{children}</div>
       </div>
@@ -199,7 +199,7 @@ export default function AboutBento() {
                 inactiveZone={0.01}
                 borderWidth={2}
               />
-              <div className="relative h-full rounded-3xl glass-dark p-8 overflow-hidden">
+              <div className="relative h-full rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md p-8 overflow-hidden">
                 {/* Light reflection on card */}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#F59E0B]/10 via-transparent to-transparent rounded-3xl pointer-events-none" />
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent rounded-3xl pointer-events-none" />

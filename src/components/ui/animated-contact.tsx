@@ -217,7 +217,7 @@ export const AnimatedContact = ({
           <p className="text-white/60 text-lg max-w-2xl mx-auto">{subtitle}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="max-w-2xl mx-auto">
           {/* Contact Info */}
           <div className="space-y-8">
             {/* Live Availability Status */}
@@ -264,10 +264,10 @@ export const AnimatedContact = ({
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <p className="text-xs text-white/40 uppercase tracking-wider mb-4">
+              <p className="text-xs text-white/40 uppercase tracking-wider mb-4 text-center">
                 Find me on
               </p>
-              <div className="flex gap-4">
+              <div className="flex justify-center gap-4">
                 {socialLinks.github && (
                   <SocialCard
                     icon={Github}
