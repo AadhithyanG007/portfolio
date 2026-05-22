@@ -200,7 +200,6 @@ export default function ProjectDetailsPage() {
                   </div>
                 </div>
               )}
-
             </div>
           </motion.div>
 

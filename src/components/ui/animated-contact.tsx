@@ -11,7 +11,6 @@ import {
   Linkedin,
   Twitter,
   MapPin,
-  Phone,
   ArrowUpRight,
 } from "lucide-react";
 
@@ -106,47 +105,53 @@ const ContactItem = ({
   value: string;
   href?: string;
   delay: number;
-}) => (
-  <motion.div
-    initial={{ opacity: 0, x: -30 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.6, delay }}
-    className="group"
-  >
-    {href ? (
-      <a
-        href={href}
-        className="flex items-center gap-4 p-4 rounded-xl glass-dark hover:border-[#FBBF24]/30 hover:bg-[#FBBF24]/5 transition-all"
-      >
-        <div className="w-12 h-12 rounded-full bg-[#F59E0B]/10 flex items-center justify-center group-hover:bg-[#F59E0B]/20 transition-colors">
-          <Icon className="w-5 h-5 text-[#FBBF24]" />
+}) => {
+  const isWhatsApp = href?.startsWith("https://wa.me/");
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay }}
+      className="group"
+    >
+      {href ? (
+        <a
+          href={href}
+          target={isWhatsApp ? "_blank" : undefined}
+          rel={isWhatsApp ? "noopener noreferrer" : undefined}
+          className="flex items-center gap-4 p-4 rounded-xl glass-dark hover:border-[#FBBF24]/30 hover:bg-[#FBBF24]/5 transition-all"
+        >
+          <div className="w-12 h-12 rounded-full bg-[#F59E0B]/10 flex items-center justify-center group-hover:bg-[#F59E0B]/20 transition-colors">
+            <Icon className="w-5 h-5 text-[#FBBF24]" />
+          </div>
+          <div>
+            <p className="text-xs text-white/40 uppercase tracking-wider">
+              {label}
+            </p>
+            <p className="text-white font-medium group-hover:text-[#FBBF24] transition-colors">
+              {value}
+            </p>
+          </div>
+          <ArrowUpRight className="w-4 h-4 text-white/40 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+        </a>
+      ) : (
+        <div className="flex items-center gap-4 p-4 rounded-xl glass-dark">
+          <div className="w-12 h-12 rounded-full bg-[#F59E0B]/10 flex items-center justify-center">
+            <Icon className="w-5 h-5 text-[#FBBF24]" />
+          </div>
+          <div>
+            <p className="text-xs text-white/40 uppercase tracking-wider">
+              {label}
+            </p>
+            <p className="text-white font-medium">{value}</p>
+          </div>
         </div>
-        <div>
-          <p className="text-xs text-white/40 uppercase tracking-wider">
-            {label}
-          </p>
-          <p className="text-white font-medium group-hover:text-[#FBBF24] transition-colors">
-            {value}
-          </p>
-        </div>
-        <ArrowUpRight className="w-4 h-4 text-white/40 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
-      </a>
-    ) : (
-      <div className="flex items-center gap-4 p-4 rounded-xl glass-dark">
-        <div className="w-12 h-12 rounded-full bg-[#F59E0B]/10 flex items-center justify-center">
-          <Icon className="w-5 h-5 text-[#FBBF24]" />
-        </div>
-        <div>
-          <p className="text-xs text-white/40 uppercase tracking-wider">
-            {label}
-          </p>
-          <p className="text-white font-medium">{value}</p>
-        </div>
-      </div>
-    )}
-  </motion.div>
-);
+      )}
+    </motion.div>
+  );
+};
 
 // Social link card
 const SocialCard = ({
@@ -186,10 +191,13 @@ export const AnimatedContact = ({
   socialLinks = {},
   className,
 }: AnimatedContactProps) => {
-
   return (
-    <section className={cn("relative w-full overflow-hidden bg-transparent z-10", className)}>
-
+    <section
+      className={cn(
+        "relative w-full overflow-hidden bg-transparent z-10",
+        className,
+      )}
+    >
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-24">
         {/* Header */}
@@ -231,7 +239,7 @@ export const AnimatedContact = ({
               </span>
             </div>
 
-            {/* WhatsApp CTA Removed as per user request */}
+            {/* WhatsApp contact */}
 
             {/* Contact items */}
             <div className="space-y-4">
@@ -243,10 +251,10 @@ export const AnimatedContact = ({
                 delay={0.2}
               />
               <ContactItem
-                icon={Phone}
-                label="Phone"
+                icon={SiWhatsapp}
+                label="WhatsApp"
                 value={phone}
-                href={`tel:${phone.replace(/\D/g, "")}`}
+                href={`https://wa.me/${phone.replace(/\D/g, "")}`}
                 delay={0.3}
               />
               <ContactItem
@@ -306,7 +314,8 @@ export const AnimatedContact = ({
           className="mt-24 pt-8 border-t border-white/10 text-center"
         >
           <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} Aadhithyan G. All rights reserved. Crafted with precision & luxury.
+            © {new Date().getFullYear()} Aadhithyan G. All rights reserved.
+            Crafted with precision & luxury.
           </p>
         </motion.div>
       </div>

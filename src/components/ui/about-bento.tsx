@@ -326,7 +326,7 @@ export default function AboutBento() {
                 B.Tech in Computer Science
               </h4>
               <p className="text-sm text-white/50">FISAT, Kerala</p>
-              <p className="text-xs text-white/30 mt-1">2022 - 2026</p>
+              <p className="text-xs text-white/30 mt-1">2023 - 2027</p>
             </GlassCard>
 
             {/* Location Card */}

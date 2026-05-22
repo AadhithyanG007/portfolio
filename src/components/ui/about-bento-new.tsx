@@ -138,7 +138,6 @@ function FloatingIcon({
 export default function AboutBento() {
   return (
     <section className="relative w-full bg-transparent overflow-hidden z-10 py-24">
-
       {/* ===== TITLE SECTION ===== */}
       <div className="relative flex flex-col items-center justify-center pt-24 pb-8">
         {/* Title */}
@@ -224,10 +223,12 @@ export default function AboutBento() {
 
                     <p className="text-white/60 text-lg leading-relaxed">
                       Currently pursuing B.Tech at{" "}
-                      <span className="text-[#E2B65C] font-semibold">FISAT</span>, I transform
-                      ideas into scalable solutions. I believe in clean
-                      architecture, security-first design, and writing code that
-                      tells a story.
+                      <span className="text-[#E2B65C] font-semibold">
+                        FISAT
+                      </span>
+                      , I transform ideas into scalable solutions. I believe in
+                      clean architecture, security-first design, and writing
+                      code that tells a story.
                     </p>
                   </div>
 
@@ -275,7 +276,7 @@ export default function AboutBento() {
                 B.Tech in Computer Science
               </h4>
               <p className="text-sm text-white/50">FISAT, Kerala</p>
-              <p className="text-xs text-white/30 mt-1">2022 - 2026</p>
+              <p className="text-xs text-white/30 mt-1">2023 - 2027</p>
             </GlassCard>
 
             {/* Location Card */}

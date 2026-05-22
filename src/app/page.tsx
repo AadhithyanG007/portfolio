@@ -35,7 +35,7 @@ export default function Home() {
       <MinimalistHero
         logoText="Aadhithyan G."
         navLinks={navLinks}
-        mainText="B.Tech student passionate about building full-stack systems that solve real-world problems."
+        mainText="Full-stack developer building clean, scalable systems that solve real-world problems."
         readMoreLink="#about"
         imageSrc="/me.png"
         imageAlt="Profile portrait"
@@ -71,8 +71,8 @@ export default function Home() {
         <AnimatedContact
           title="Let's Connect"
           subtitle="Have a project in mind? Let's bring your ideas to life."
-          email="aadhithyan.g@example.com"
-          phone="+91 98765 43210"
+          email="aadhithyang475@gmail.com"
+          phone="+91 9633723011"
           location="Kerala, India"
           socialLinks={{
             github: "https://github.com/AadhithyanG007",

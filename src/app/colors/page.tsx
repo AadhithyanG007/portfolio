@@ -193,7 +193,7 @@ const HeroPreview = ({
               Available
             </div>
             <p className="text-[8px] text-white/60 max-w-[100px]">
-              B.Tech student building full-stack systems...
+              Full-stack developer building scalable systems...
             </p>
             <button
               className="mt-2 px-3 py-1 rounded-full text-[8px] font-bold text-black"
@@ -383,8 +383,8 @@ const FullPreview = ({ scheme }: { scheme: (typeof colorSchemes)[0] }) => {
               Available for work
             </motion.div>
             <p className="text-white/60 mb-6">
-              B.Tech student passionate about building full-stack systems that
-              solve real-world problems.
+              Full-stack developer building clean, scalable systems that solve
+              real-world problems.
             </p>
             <button
               className="px-6 py-3 rounded-full font-bold text-black hover:opacity-90 transition-opacity"
