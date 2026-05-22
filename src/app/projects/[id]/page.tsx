@@ -5,7 +5,6 @@ import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, CheckCircle2, ChevronRight, Sparkles } from "lucide-react";
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
 import { projects, Project } from "@/data/projects";
 
 export default function ProjectDetailsPage() {
@@ -128,10 +127,10 @@ export default function ProjectDetailsPage() {
             className="lg:col-span-2"
           >
             <h2 className="text-3xl font-bold mb-6">About the Project</h2>
-            <div className="prose prose-invert prose-teal max-w-none prose-h3:text-[#FBBF24] prose-h3:mt-8 prose-h3:mb-4 prose-p:text-white/70 prose-li:text-white/70">
-              <ReactMarkdown>
+            <div className="prose prose-invert max-w-none">
+              <p className="text-lg text-white/70 leading-relaxed whitespace-pre-line">
                 {project.longDescription || project.description}
-              </ReactMarkdown>
+              </p>
             </div>
           </motion.div>
 

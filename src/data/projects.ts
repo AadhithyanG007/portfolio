@@ -1,5 +1,3 @@
-import { medinexusDetails, infinityPoolsDetails, soonDetails, portfolioDetails } from "./detailedDescriptions";
-
 export interface Project {
   id: string;
   title: string;
@@ -19,7 +17,7 @@ export const projects: Project[] = [
     id: "medinexus",
     title: "MediNexus",
     description: "Secure Enterprise Telemedicine Platform with Zero-Trust Authentication, Role-Based Access Control, and Split-Screen Video Consultation.",
-    longDescription: medinexusDetails,
+    longDescription: "A full-stack telemedicine application enabling secure video consultations, AI-powered health assistance, real-time chat, lab report management, prescription tracking, email OTP password recovery, account settings, and comprehensive admin governance — built with a teal & obsidian design system. Stress-tested to handle high-traffic Telemedicine influxes utilizing Artillery.io.",
     features: [
       "24/7 Appointment Booking with Grouped Time Slots",
       "Real-time P2P Video Calls via PeerJS WebRTC",
@@ -43,7 +41,7 @@ export const projects: Project[] = [
     id: "infinity-pools",
     title: "Infinity Pools",
     description: "Premium Swimming Pool Construction & Maintenance landing page featuring cinematic scrolling and glassmorphism design.",
-    longDescription: infinityPoolsDetails,
+    longDescription: "A high-end landing page designed for a luxury swimming pool construction and maintenance company. Focuses on delivering a premium, cinematic user experience through custom smooth scrolling engines (Lenis), Framer Motion animations, and a cohesive glassmorphism design system.",
     features: [
       "Cinematic Inertia-Based Smooth Scrolling",
       "🧊 Custom Glassmorphism UI System",
@@ -62,7 +60,7 @@ export const projects: Project[] = [
     id: "soon",
     title: "SOON",
     description: "Something Out Of Nothing – A hybrid Android team showcase app with digital roster, task logging, and gamified points system.",
-    longDescription: soonDetails,
+    longDescription: "SOON is a dynamic team showcase application designed to foster collaboration and transparency. It features a comprehensive digital roster, a secure task logging system, and a gamified points leaderboard built with modern web technologies packaged for mobile platforms.",
     features: [
       "Interactive Team Digital Roster",
       "Task Logging and Management System",
@@ -81,7 +79,7 @@ export const projects: Project[] = [
     id: "portfolio",
     title: "Portfolio Website",
     description: "This very website! Built with Next.js, Framer Motion, and Tailwind CSS with stunning animations and a unified glassmorphic system.",
-    longDescription: portfolioDetails,
+    longDescription: "My personal developer portfolio designed to showcase my projects, skills, and experience. Rebuilt from the ground up to feature a cohesive cinematic experience utilizing a unified parallax background, glassmorphism UI cards, and hardware-accelerated Framer Motion animations.",
     features: [
       "Unified Global Parallax Background",
       "Atropos.js 3D Hover Interactions",
