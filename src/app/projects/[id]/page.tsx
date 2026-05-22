@@ -200,6 +200,7 @@ export default function ProjectDetailsPage() {
                   </div>
                 </div>
               )}
+
             </div>
           </motion.div>
 
@@ -211,7 +212,7 @@ export default function ProjectDetailsPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="lg:col-span-1"
             >
-              <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-8 sticky top-32">
+              <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-8 sticky top-32 space-y-8">
                 <h3 className="text-xl font-bold mb-6 text-[#FBBF24]">
                   Key Features
                 </h3>
@@ -225,6 +226,39 @@ export default function ProjectDetailsPage() {
                     </li>
                   ))}
                 </ul>
+
+                {detailEntry?.metrics && detailEntry.metrics.length > 0 && (
+                  <div className="pt-6 border-t border-white/10">
+                    <h4 className="text-lg font-semibold text-[#FBBF24] mb-4">
+                      Metrics / Outcomes
+                    </h4>
+                    <ul className="space-y-3 text-white/75">
+                      {detailEntry.metrics.map((item, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <span className="mt-1 h-2 w-2 rounded-full bg-[#FBBF24]" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {detailEntry?.seoOptimizations &&
+                  detailEntry.seoOptimizations.length > 0 && (
+                    <div className="pt-6 border-t border-white/10">
+                      <h4 className="text-lg font-semibold text-[#FBBF24] mb-4">
+                        SEO Optimization
+                      </h4>
+                      <ul className="space-y-3 text-white/75">
+                        {detailEntry.seoOptimizations.map((item, index) => (
+                          <li key={index} className="flex items-start gap-3">
+                            <span className="mt-1 h-2 w-2 rounded-full bg-[#FBBF24]" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
               </div>
             </motion.div>
           )}

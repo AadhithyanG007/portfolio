@@ -931,9 +931,9 @@ graph TB
 ---
 
 **MediNexus** - _Telemedicine Made Secure_ 🏥
- ----- end of medinexus ---
+----- end of medinexus ---
 
- # 🌊 Infinity Pools
+# 🌊 Infinity Pools
 
 <div align="center">
   <img src="./logo.png" alt="Infinity Pools Logo" width="180" style="margin-bottom: 20px;" />
@@ -954,36 +954,49 @@ Every aspect of the user interface is crafted to evoke premium quality, from cus
 ## 🌟 Key Features & Customizations
 
 ### 1. 🌊 Interactive 3D Water Scene
-* **Vertex Shaders & Math Waves:** High-performance, mathematical sine-wave wave simulations using Three.js and `@react-three/fiber` to animate water physics.
-* **Atmospheric Lighting:** Combines ambient, directional, and point lighting to project high-fidelity specular highlights and realistic glows onto the water surface.
-* **Floating Particles:** Ambient floating micro-particles simulating reflecting water mist or dust motes under custom fog settings.
+
+- **Vertex Shaders & Math Waves:** High-performance, mathematical sine-wave wave simulations using Three.js and `@react-three/fiber` to animate water physics.
+- **Atmospheric Lighting:** Combines ambient, directional, and point lighting to project high-fidelity specular highlights and realistic glows onto the water surface.
+- **Floating Particles:** Ambient floating micro-particles simulating reflecting water mist or dust motes under custom fog settings.
 
 ### 2. 🔍 Scroll-Driven Zoom Parallax Grid
-* **Cinematic Scrolling:** Uses `motion/react` (Framer Motion) scroll hooks to control the spatial scaling of multi-dimensional premium villa and resort pool galleries.
-* **Responsive Visual Spacing:** Multi-directional spatial translations that dynamically adapt to the viewport width.
-* **High-Res Local Portfolio Assets:** Showcases 6 landmark regional builds:
-  1. **Rakesh Residence** (*Cherpulassery, Kerala*)
-  2. **Ashik Residence** (*Ponnani, Kerala*)
-  3. **Babu Joseph Villa** (*Wayanad, Kerala*)
-  4. **Vinod Jose Residence** (*Chalakudy, Kerala*)
-  5. **Shameer Villa** (*Aluva, Kerala*)
-  6. **Ravikumar Villa** (*Vellinezhi, Kerala*)
+
+- **Cinematic Scrolling:** Uses `motion/react` (Framer Motion) scroll hooks to control the spatial scaling of multi-dimensional premium villa and resort pool galleries.
+- **Responsive Visual Spacing:** Multi-directional spatial translations that dynamically adapt to the viewport width.
+- **High-Res Local Portfolio Assets:** Showcases 6 landmark regional builds:
+  1. **Rakesh Residence** (_Cherpulassery, Kerala_)
+  2. **Ashik Residence** (_Ponnani, Kerala_)
+  3. **Babu Joseph Villa** (_Wayanad, Kerala_)
+  4. **Vinod Jose Residence** (_Chalakudy, Kerala_)
+  5. **Shameer Villa** (_Aluva, Kerala_)
+  6. **Ravikumar Villa** (_Vellinezhi, Kerala_)
 
 ### 3. 🎥 Motion Masonry Portfolio
-* **Active Video Previews**: Supports silent, autoplaying, looping, inline MP4 video elements (`playsInline`, `muted`) behaving like rich, live-motion photography alongside high-res static images.
-* **20 Integrated Assets**: Maps 14 custom-tailored finished project photos and 6 high-res site videos directly from local resources, maintaining an outstanding layout balance.
-* **Smart Portrait Filtering**: Employs structural filter definitions to automatically omit organizational founder profile headshots, maintaining an exclusive focus on construction achievements.
+
+- **Active Video Previews**: Supports silent, autoplaying, looping, inline MP4 video elements (`playsInline`, `muted`) behaving like rich, live-motion photography alongside high-res static images.
+- **20 Integrated Assets**: Maps 14 custom-tailored finished project photos and 6 high-res site videos directly from local resources, maintaining an outstanding layout balance.
+- **Smart Portrait Filtering**: Employs structural filter definitions to automatically omit organizational founder profile headshots, maintaining an exclusive focus on construction achievements.
 
 ### 4. 👥 Interactive Team Portraits & Micro-Animations
-* **Dynamic Hover Elevation**: Features portrait cards for CEO **Rahul Ramakrishnan** and Co-Founder **Jovin John**.
-* **Spatial Slider Transition**: Leverages advanced Tailwind-motion transitions where the names and roles sit elegantly at the card bottom and slide smoothly upwards to a centered lower-middle placement on hover, fading in detail bio descriptions in real-time.
+
+- **Dynamic Hover Elevation**: Features portrait cards for CEO **Rahul Ramakrishnan** and Co-Founder **Jovin John**.
+- **Spatial Slider Transition**: Leverages advanced Tailwind-motion transitions where the names and roles sit elegantly at the card bottom and slide smoothly upwards to a centered lower-middle placement on hover, fading in detail bio descriptions in real-time.
 
 ### 5. 🟢 24/7 Availability Pulse Status
-* **Pulsing Status Indicator**: Replaced traditional static business hours on the Contact page with a premium glassmorphic badge sporting a neon-aqua active pulse indicator (`animate-ping`).
-* **Round-the-Clock Support**: Assures prospective luxury buyers of 24/7 availability for custom inquiries and immediate WhatsApp scheduling.
+
+- **Pulsing Status Indicator**: Replaced traditional static business hours on the Contact page with a premium glassmorphic badge sporting a neon-aqua active pulse indicator (`animate-ping`).
+- **Round-the-Clock Support**: Assures prospective luxury buyers of 24/7 availability for custom inquiries and immediate WhatsApp scheduling.
 
 ### 6. 🗺️ Custom Google Maps Listing Embed
-* **Direct Business Pin**: Includes the precise INFINITY POOLS Mannarkkad Google Maps coordinates and business listing query direct-link, configured greyscale to match the luxury dark design.
+
+- **Direct Business Pin**: Includes the precise INFINITY POOLS Mannarkkad Google Maps coordinates and business listing query direct-link, configured greyscale to match the luxury dark design.
+
+---
+
+## 📊 Metrics / Outcomes
+
+- **Lighthouse (Mobile):** Performance 83, Accessibility 89, Best Practices 100, SEO 100.
+- **SEO Optimization:** Meta titles/descriptions, canonical URLs, Open Graph + Twitter tags, JSON-LD (LocalBusiness + Service), sitemap.xml, robots.txt, Google Search Console, mobile responsiveness, heading hierarchy, optimized alt text, HTTPS deployment, SPA SEO handling with Helmet + rewrites.
 
 ---
 
@@ -1032,30 +1045,33 @@ InfinityPools/
 
 ## 🛠️ Tech Stack & Dependencies
 
-* **Core Framework:** React 19, TypeScript
-* **Bundler & Tooling:** Vite 6
-* **Styling & Theme Engine:** Tailwind CSS v4, PostCSS
-* **3D Graphics & Physics:** Three.js, `@react-three/fiber`, `@react-three/drei`
-* **Animations & Micro-Interactions:** Framer Motion (`motion/react`)
-* **Scroll Engineering:** Lenis Smooth Scroll
-* **Icons:** Lucide React
+- **Core Framework:** React 19, TypeScript
+- **Bundler & Tooling:** Vite 6
+- **Styling & Theme Engine:** Tailwind CSS v4, PostCSS
+- **3D Graphics & Physics:** Three.js, `@react-three/fiber`, `@react-three/drei`
+- **Animations & Micro-Interactions:** Framer Motion (`motion/react`)
+- **Scroll Engineering:** Lenis Smooth Scroll
+- **Icons:** Lucide React
 
 ---
 
 ## 🚀 Getting Started & Local Development
 
 ### Prerequisites
+
 Make sure you have [Node.js](https://nodejs.org/) installed (v18 or higher recommended).
 
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/AadhithyanG007/InfinityPools.git
    cd InfinityPools
    ```
 
 2. **Install project dependencies:**
+
    ```bash
    npm install
    ```
@@ -1071,16 +1087,20 @@ Make sure you have [Node.js](https://nodejs.org/) installed (v18 or higher recom
 ## 📦 Production Compiling & Namecheap Deployment
 
 ### 1. Build Compilation
+
 To compile and optimize the website for production:
+
 ```bash
 npm run build
 ```
+
 This generates a highly optimized static build bundle inside the `dist/` directory in less than **4 seconds** (using Vite 6 compiler).
 
 ### 2. File Assets Profile
-* **Total Build Size**: **35.5 MB**
-* **Video Content**: **30.5 MB** (Local looping MP4s optimized for instant network streaming)
-* **Code & Styles Bundle**: **5.0 MB** (Minified, compressed, and fully optimized JavaScript/CSS chunks)
+
+- **Total Build Size**: **35.5 MB**
+- **Video Content**: **30.5 MB** (Local looping MP4s optimized for instant network streaming)
+- **Code & Styles Bundle**: **5.0 MB** (Minified, compressed, and fully optimized JavaScript/CSS chunks)
 
 ### 3. Deploying to Namecheap (cPanel Hosting)
 
@@ -1116,11 +1136,11 @@ The styling structure focuses heavily on deep, relaxing aquatic contrasts. The m
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, serif;
-  --color-pool-950: #030A12;   /* Deep Abyss Background */
-  --color-pool-900: #071120;   /* Muted Dark Base */
-  --color-pool-aqua: #38BDF8;  /* Sparkling Water highlight */
-  --color-pool-cyan: #22D3EE;  /* High energy water highlight */
-  --color-pool-gold: #D4A853;  /* Premium Brass/Sand contrast */
+  --color-pool-950: #030a12; /* Deep Abyss Background */
+  --color-pool-900: #071120; /* Muted Dark Base */
+  --color-pool-aqua: #38bdf8; /* Sparkling Water highlight */
+  --color-pool-cyan: #22d3ee; /* High energy water highlight */
+  --color-pool-gold: #d4a853; /* Premium Brass/Sand contrast */
 }
 ```
 
@@ -1128,10 +1148,10 @@ The styling structure focuses heavily on deep, relaxing aquatic contrasts. The m
 
 ## 🤝 Core Brand Guidelines
 
-* **Official Business Address**: Nadamalika Road, Mannarkkad, Mannarkad-I, Kerala 678582.
-* **Direct Office Phone**: `+91 94462 41298`
-* **Direct WhatsApp Support**: `+91 75940 00075` (Aligned across all CTA elements)
-* **Brand Spelling**: **Rahul Ramakrishnan** (Founder & CEO) & **Jovin John** (Co-Founder).
+- **Official Business Address**: Nadamalika Road, Mannarkkad, Mannarkad-I, Kerala 678582.
+- **Direct Office Phone**: `+91 94462 41298`
+- **Direct WhatsApp Support**: `+91 75940 00075` (Aligned across all CTA elements)
+- **Brand Spelling**: **Rahul Ramakrishnan** (Founder & CEO) & **Jovin John** (Co-Founder).
 
 ---
 
@@ -1326,4 +1346,4 @@ If you'd like, I can:
 ---
 
 Generated by GitHub Copilot.
----end of SOON ---  
+---end of SOON ---

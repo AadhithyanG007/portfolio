@@ -4,6 +4,8 @@ export type ProjectDetailEntry = {
   highlights: string[];
   buildNotes: string[];
   techStack: string[];
+  metrics?: string[];
+  seoOptimizations?: string[];
 };
 
 export const projectDetails: Record<string, ProjectDetailEntry> = {
@@ -52,6 +54,20 @@ export const projectDetails: Record<string, ProjectDetailEntry> = {
       "Tailwind CSS + Framer Motion",
       "Three.js + React Three Fiber + Drei",
       "Lenis smooth scrolling + Lucide icons",
+    ],
+    metrics: [
+      "Lighthouse (Desktop): Performance 83",
+      "Lighthouse (Desktop): Accessibility 89",
+      "Lighthouse (Desktop): Best Practices 100",
+      "Lighthouse (Desktop): SEO 100",
+    ],
+    seoOptimizations: [
+      "JSON-LD structured data",
+      "sitemap.xml",
+      "Canonical URLs",
+      "Google Search Console setup",
+      "Open Graph and Twitter tags",
+      "SPA SEO handling with Helmet and rewrites",
     ],
   },
   soon: {
