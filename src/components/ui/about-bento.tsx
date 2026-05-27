@@ -357,7 +357,7 @@ export default function AboutBento() {
             {/* Git Commits Card */}
             <GlassCard delay={0.6}>
               <GitBranch className="w-6 h-6 text-amber-400 mb-3" />
-              <div className="text-3xl font-bold text-white">500+</div>
+              <div className="text-3xl font-bold text-white">120+</div>
               <p className="text-sm text-white/50">Git Commits</p>
             </GlassCard>
 
